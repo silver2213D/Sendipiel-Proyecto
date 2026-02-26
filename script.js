@@ -1,17 +1,17 @@
-// BASE DE DATOS DE PRODUCTOS
+// BASE DE DATOS DE PRODUCTOS SENSIPIEL
 const productos = [
-    { id: 1, nombre: 'Crema Hidratante', categoria: 'skincare', precio: 45.99, imagen: '🧴', descripcion: 'Crema hidratante con vitamina E y ácido hialurónico', rating: 4.5 },
-    { id: 2, nombre: 'Serum Vitamina C', categoria: 'skincare', precio: 38.50, imagen: '💧', descripcion: 'Serum antioxidante con vitamina C pura', rating: 4.8 },
-    { id: 3, nombre: 'Maquillaje Base', categoria: 'maquillaje', precio: 32.00, imagen: '💄', descripcion: 'Base de maquillaje de larga duración', rating: 4.6 },
-    { id: 4, nombre: 'Labial Rojo', categoria: 'maquillaje', precio: 18.99, imagen: '💋', descripcion: 'Labial color rojo intenso', rating: 4.4 },
-    { id: 5, nombre: 'Espejo de Bolsillo', categoria: 'accesorios', precio: 12.50, imagen: '🪞', descripcion: 'Espejo compacto portable', rating: 4.2 },
-    { id: 6, nombre: 'Cepillo Facial', categoria: 'accesorios', precio: 25.00, imagen: '🪮', descripcion: 'Cepillo de silicona para limpiar rostro', rating: 4.7 },
-    { id: 7, nombre: 'Mascarilla Facial', categoria: 'skincare', precio: 28.50, imagen: '🥒', descripcion: 'Mascarilla purificante de arcilla', rating: 4.5, descuento: 15 },
-    { id: 8, nombre: 'Sombra de Ojos', categoria: 'maquillaje', precio: 22.00, imagen: '👁️', descripcion: 'Paleta de 12 colores', rating: 4.6, descuento: 20 },
-    { id: 9, nombre: 'Protector Solar', categoria: 'skincare', precio: 35.00, imagen: '☀️', descripcion: 'FPS 50+ resistente al agua', rating: 4.8 },
-    { id: 10, nombre: 'Bolsa Cosmetiquera', categoria: 'accesorios', precio: 29.99, imagen: '👜', descripcion: 'Bolsa organizadora de viaje', rating: 4.5 },
-    { id: 11, nombre: 'Tónico Facial', categoria: 'skincare', precio: 31.50, imagen: '🧪', descripcion: 'Tónico equilibrador para piel mixta', rating: 4.4 },
-    { id: 12, nombre: 'Rímel de Volumen', categoria: 'maquillaje', precio: 26.00, imagen: '✨', descripcion: 'Rímel con efecto volumizador', rating: 4.7 }
+    { id: 1, nombre: 'Serum de Vitamina C Pura', categoria: 'rostro', precio: 65.00, imagen: '✨', descripcion: 'Serum concentrado con vitamina C estabilizada. Reduce manchas y reactiva la luminosidad natural de tu piel.', rating: 4.8 },
+    { id: 2, nombre: 'Crema Hidratante Premium', categoria: 'rostro', precio: 55.99, imagen: '🌿', descripcion: 'Formula enriquecida con acido hialuronico y extractos naturales. Hidratacion profunda 24 horas.', rating: 4.7 },
+    { id: 3, nombre: 'Mascarilla Purificante de Arcilla', categoria: 'rostro', precio: 38.50, imagen: '🧴', descripcion: 'Mascarilla desintoxicante con arcilla blanca pura. Limpia profundamente los poros en 15 minutos.', rating: 4.6, descuento: 20 },
+    { id: 4, nombre: 'Cleanser Espumoso Suave', categoria: 'rostro', precio: 32.00, imagen: '🫧', descripcion: 'Limpiador facial sin sulfatos. Remueve impurezas sin reseca tu piel. Apto para piel sensible.', rating: 4.5 },
+    { id: 5, nombre: 'Tonico Equilibrador pH', categoria: 'rostro', precio: 28.50, imagen: '💧', descripcion: 'Tonica balanceadora que prepara la piel para los siguientes pasos. Con camomila y aloe vera.', rating: 4.4 },
+    { id: 6, nombre: 'Aceite Corporal Aromatico', categoria: 'cuerpo', precio: 42.00, imagen: '🛢️', descripcion: 'Aceite corporal nutritivo con aroma relajante. Hidrata y suaviza la piel del cuerpo en profundidad.', rating: 4.6 },
+    { id: 7, nombre: 'Crema de Manos Reparadora', categoria: 'cuerpo', precio: 19.99, imagen: '👐', descripcion: 'Crema reparadora especializada para manos. Protege y regenera la piel mas delicada.', rating: 4.3 },
+    { id: 8, nombre: 'Contorno de Ojos Antiarrugas', categoria: 'especializado', precio: 68.00, imagen: '👁️', descripcion: 'Contorno anti-aging con cafaina y retinol natural. Reduce ojeras y arrugas de expresion en 4 semanas.', rating: 4.9, descuento: 15 },
+    { id: 9, nombre: 'Protector Solar SPF 50+', categoria: 'especializado', precio: 45.99, imagen: '☀️', descripcion: 'Protector UV mineral con filtro de amplio espectro. Protege sin dejar residuo blanco. Apto para todas las pieles.', rating: 4.8 },
+    { id: 10, nombre: 'Serum Antienvejecimiento Avanzado', categoria: 'especializado', precio: 72.50, imagen: '💎', descripcion: 'Formula premium con retinol y peptidos biodispersables. Reafirma y rejuvenece la piel notoriamente.', rating: 4.9, descuento: 10 },
+    { id: 11, nombre: 'Exfoliante Enzimatico Suave', categoria: 'rostro', precio: 35.00, imagen: '🌾', descripcion: 'Exfoliante enzimatico con papaya. Elimina celulas muertas sin irritar. 1-2 veces por semana.', rating: 4.5 },
+    { id: 12, nombre: 'Booster Luminosidad Facial', categoria: 'especializado', precio: 55.00, imagen: '⚡', descripcion: 'Booster concentrado con niacinamida pura. Proporciona efecto iluminador inmediato y a largo plazo.', rating: 4.7, descuento: 12 }
 ];
 
 // CARRITO

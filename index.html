@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensipiel - Tienda Online</title>
+    <title>Sensipiel - Cuidado que se siente</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="showPage('home')">🛍️ Sensipiel</div>
+            <div class="logo" onclick="showPage('home')">
+                <span class="logo-text">SENSIPIEL</span>
+                <span class="logo-tagline">Cuidado que se siente</span>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#" onclick="showPage('home'); return false;">Inicio</a></li>
-                <li><a href="#" onclick="showPage('tienda'); return false;">Tienda</a></li>
+                <li><a href="#" onclick="showPage('tienda'); return false;">Colecciones</a></li>
+                <li><a href="#" onclick="showPage('nosotros'); return false;">Acerca de</a></li>
                 <li><a href="#" onclick="showPage('contacto'); return false;">Contacto</a></li>
-                <li class="cart-icon" onclick="showPage('carrito')">🛒 <span id="cart-count">0</span></li>
+                <li class="cart-icon" onclick="showPage('carrito')"><span class="cart-emoji">🛒</span><span id="cart-count">0</span></li>
             </ul>
         </div>
     </nav>
@@ -23,43 +28,99 @@
     <!-- PÁGINA INICIO -->
     <div id="home" class="page">
         <section class="hero">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>Bienvenido a Sensipiel</h1>
-                <p>Productos de calidad para tu piel</p>
-                <button class="btn-primary" onclick="showPage('tienda')">Comprar Ahora</button>
+                <h1>COLECCIONES INDISPENSABLES</h1>
+                <p>Para una piel radiante y cuidada</p>
+                <button class="btn-primary" onclick="showPage('tienda')">EXPLORAR PRODUCTOS</button>
             </div>
         </section>
+        
+        <section class="benefits">
+            <div class="benefit-card">
+                <div class="benefit-icon">✨</div>
+                <h3>Formulas Premium</h3>
+                <p>Ingredientes naturales de maxima calidad</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔬</div>
+                <h3>Dermatologico Testado</h3>
+                <p>Seguro para todo tipo de piel</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🌿</div>
+                <h3>Cruelty Free</h3>
+                <p>Sin ingredientes animales</p>
+            </div>
+        </section>
+        
         <section class="featured">
-            <h2>Productos Destacados</h2>
+            <div class="featured-header">
+                <h2>BESTSELLERS</h2>
+                <p>Nuestros productos favoritos</p>
+            </div>
             <div class="products-grid" id="featured-products"></div>
         </section>
     </div>
 
     <!-- PÁGINA TIENDA -->
     <div id="tienda" class="page" style="display:none;">
+        <div class="tienda-header">
+            <h1>NUESTRAS COLECCIONES</h1>
+            <p>Descubre los productos especialmente formulados para ti</p>
+        </div>
         <div class="tienda-container">
             <aside class="filters">
-                <h3>Filtros</h3>
+                <h3>FILTRAR</h3>
                 <div class="filter-section">
-                    <h4>Categoría</h4>
-                    <label><input type="checkbox" value="skincare" onchange="filterProducts()"> Skincare</label>
-                    <label><input type="checkbox" value="maquillaje" onchange="filterProducts()"> Maquillaje</label>
-                    <label><input type="checkbox" value="accesorios" onchange="filterProducts()"> Accesorios</label>
-                    <label><input type="checkbox" value="promocion" onchange="filterProducts()"> En Promoción</label>
+                    <h4>Categoria</h4>
+                    <label><input type="checkbox" value="rostro" onchange="filterProducts()"> Cuidado Rostro</label>
+                    <label><input type="checkbox" value="cuerpo" onchange="filterProducts()"> Cuidado Cuerpo</label>
+                    <label><input type="checkbox" value="especializado" onchange="filterProducts()"> Tratamientos Especializados</label>
+                    <label><input type="checkbox" value="promocion" onchange="filterProducts()"> En Promocion</label>
                 </div>
                 <div class="filter-section">
                     <h4>Rango de Precio</h4>
                     <input type="range" min="0" max="300" value="300" id="price-range" onchange="filterProducts()">
-                    <p>Hasta $<span id="price-value">300</span></p>
+                    <p>Hasta <span class="price-symbol">$</span><span id="price-value">300</span></p>
                 </div>
             </aside>
             <main class="tienda-main">
                 <div class="search-bar">
-                    <input type="text" id="search-input" placeholder="Buscar productos..." onkeyup="searchProducts()">
+                    <input type="text" id="search-input" placeholder="Buscar producto..." onkeyup="searchProducts()">
                     <button onclick="searchProducts()" class="btn-search">🔍</button>
                 </div>
                 <div class="products-grid" id="products-grid"></div>
             </main>
+        </div>
+    </div>
+    
+    <!-- PÁGINA ACERCA DE -->
+    <div id="nosotros" class="page" style="display:none;">
+        <div class="about-container">
+            <h1>SOBRE SENSIPIEL</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Nuestra Mision</h2>
+                    <p>En Sensipiel creemos que el cuidado de la piel es un acto de amor propio. Nos dedicamos a crear productos con ingredientes naturales de calidad premium que transforman tu rutina diaria en un momento de bienestar.</p>
+                    <h2>Ingredientes Naturales</h2>
+                    <p>Cada formula esta cuidadosamente desarrollada con ingredientes naturales, testados dermatologicamente y sin quimicos agresivos. Tu piel lo merece.</p>
+                </div>
+                <div class="about-values">
+                    <div class="value-item">
+                        <h3>🌱 Natural</h3>
+                        <p>Ingredientes puros de la naturaleza</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>💚 Sostenible</h3>
+                        <p>Comprometidos con el medio ambiente</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>✨ Efectivo</h3>
+                        <p>Resultados visibles en 4 semanas</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -87,21 +148,40 @@
     <!-- PÁGINA CONTACTO -->
     <div id="contacto" class="page" style="display:none;">
         <div class="contact-container">
-            <h2>Contacto</h2>
+            <h1>CONTACTANOS</h1>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <p><strong>📧 Email:</strong> info@sensipiel.com</p>
-                    <p><strong>📱 Teléfono:</strong> +34 XXX XXX XXX</p>
-                    <p><strong>📍 Dirección:</strong> Calle Principal 123, Madrid, España</p>
-                    <p><strong>⏰ Horario:</strong> Lunes a Viernes 9:00 - 18:00</p>
+                    <h3>Estamos aqui para ayudarte</h3>
+                    <div class="contact-item">
+                        <strong>Correo Electronico</strong>
+                        <p>contacto@sensipiel.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Telefono</strong>
+                        <p>+34 900 123 456</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Ubicacion</strong>
+                        <p>Calle Madrid 123, Espana</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horario de Atencion</strong>
+                        <p>Lunes a Viernes: 9:00 - 19:00<br>Sabado: 10:00 - 14:00</p>
+                    </div>
                 </div>
                 <form class="contact-form" onsubmit="sendContact(event)">
-                    <h3>Envíanos un Mensaje</h3>
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    <h3>Envianos tu Consulta</h3>
+                    <input type="text" placeholder="Tu nombre completo" required>
+                    <input type="email" placeholder="tu@email.com" required>
+                    <select required>
+                        <option value="">Selecciona un tema</option>
+                        <option value="producto">Consulta sobre producto</option>
+                        <option value="pedido">Seguimiento de pedido</option>
+                        <option value="devolucion">Devoluciones</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea placeholder="Cuentanos como podemos ayudarte..." rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">ENVIAR CONSULTA</button>
                 </form>
             </div>
         </div>
@@ -109,7 +189,31 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026 Sensipiel. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SENSIPIEL</h4>
+                <p>Cuidado que se siente</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('tienda'); return false;">Tienda</a></li>
+                    <li><a href="#" onclick="showPage('nosotros'); return false;">Acerca de</a></li>
+                    <li><a href="#" onclick="showPage('contacto'); return false;">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Siguenos</h4>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SENSIPIEL - Cuidado que se siente. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
