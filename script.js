@@ -1,17 +1,17 @@
 // BASE DE DATOS DE PRODUCTOS SENSIPIEL
 const productos = [
-    { id: 1, nombre: 'Serum de Vitamina C Pura', categoria: 'rostro', precio: 65.00, imagen: '✨', descripcion: 'Serum concentrado con vitamina C estabilizada. Reduce manchas y reactiva la luminosidad natural de tu piel.', rating: 4.8 },
-    { id: 2, nombre: 'Crema Hidratante Premium', categoria: 'rostro', precio: 55.99, imagen: '🌿', descripcion: 'Formula enriquecida con acido hialuronico y extractos naturales. Hidratacion profunda 24 horas.', rating: 4.7 },
-    { id: 3, nombre: 'Mascarilla Purificante de Arcilla', categoria: 'rostro', precio: 38.50, imagen: '🧴', descripcion: 'Mascarilla desintoxicante con arcilla blanca pura. Limpia profundamente los poros en 15 minutos.', rating: 4.6, descuento: 20 },
-    { id: 4, nombre: 'Cleanser Espumoso Suave', categoria: 'rostro', precio: 32.00, imagen: '🫧', descripcion: 'Limpiador facial sin sulfatos. Remueve impurezas sin reseca tu piel. Apto para piel sensible.', rating: 4.5 },
-    { id: 5, nombre: 'Tonico Equilibrador pH', categoria: 'rostro', precio: 28.50, imagen: '💧', descripcion: 'Tonica balanceadora que prepara la piel para los siguientes pasos. Con camomila y aloe vera.', rating: 4.4 },
-    { id: 6, nombre: 'Aceite Corporal Aromatico', categoria: 'cuerpo', precio: 42.00, imagen: '🛢️', descripcion: 'Aceite corporal nutritivo con aroma relajante. Hidrata y suaviza la piel del cuerpo en profundidad.', rating: 4.6 },
-    { id: 7, nombre: 'Crema de Manos Reparadora', categoria: 'cuerpo', precio: 19.99, imagen: '👐', descripcion: 'Crema reparadora especializada para manos. Protege y regenera la piel mas delicada.', rating: 4.3 },
-    { id: 8, nombre: 'Contorno de Ojos Antiarrugas', categoria: 'especializado', precio: 68.00, imagen: '👁️', descripcion: 'Contorno anti-aging con cafaina y retinol natural. Reduce ojeras y arrugas de expresion en 4 semanas.', rating: 4.9, descuento: 15 },
-    { id: 9, nombre: 'Protector Solar SPF 50+', categoria: 'especializado', precio: 45.99, imagen: '☀️', descripcion: 'Protector UV mineral con filtro de amplio espectro. Protege sin dejar residuo blanco. Apto para todas las pieles.', rating: 4.8 },
-    { id: 10, nombre: 'Serum Antienvejecimiento Avanzado', categoria: 'especializado', precio: 72.50, imagen: '💎', descripcion: 'Formula premium con retinol y peptidos biodispersables. Reafirma y rejuvenece la piel notoriamente.', rating: 4.9, descuento: 10 },
-    { id: 11, nombre: 'Exfoliante Enzimatico Suave', categoria: 'rostro', precio: 35.00, imagen: '🌾', descripcion: 'Exfoliante enzimatico con papaya. Elimina celulas muertas sin irritar. 1-2 veces por semana.', rating: 4.5 },
-    { id: 12, nombre: 'Booster Luminosidad Facial', categoria: 'especializado', precio: 55.00, imagen: '⚡', descripcion: 'Booster concentrado con niacinamida pura. Proporciona efecto iluminador inmediato y a largo plazo.', rating: 4.7, descuento: 12 }
+    { id: 1, nombre: 'Serum de Vitamina C Pura', categoria: 'rostro', precio: 65.00, imagen: 'images/serum-vitamina-c.jpg', descripcion: 'Serum concentrado con vitamina C estabilizada. Reduce manchas y reactiva la luminosidad natural de tu piel.', rating: 4.8, stock: 10 },
+    { id: 2, nombre: 'Crema Hidratante Premium', categoria: 'rostro', precio: 55.99, imagen: 'images/crema-hidratante.jpg', descripcion: 'Formula enriquecida con acido hialuronico y extractos naturales. Hidratacion profunda 24 horas.', rating: 4.7, stock: 15 },
+    { id: 3, nombre: 'Mascarilla Purificante de Arcilla', categoria: 'rostro', precio: 38.50, imagen: 'images/mascarilla-arcilla.jpg', descripcion: 'Mascarilla desintoxicante con arcilla blanca pura. Limpia profundamente los poros en 15 minutos.', rating: 4.6, descuento: 20, stock: 8 },
+    { id: 4, nombre: 'Cleanser Espumoso Suave', categoria: 'rostro', precio: 32.00, imagen: 'images/cleanser-suave.jpg', descripcion: 'Limpiador facial sin sulfatos. Remueve impurezas sin reseca tu piel. Apto para piel sensible.', rating: 4.5, stock: 12 },
+    { id: 5, nombre: 'Tonico Equilibrador pH', categoria: 'rostro', precio: 28.50, imagen: 'images/tonico-ph.jpg', descripcion: 'Tonica balanceadora que prepara la piel para los siguientes pasos. Con camomila y aloe vera.', rating: 4.4, stock: 20 },
+    { id: 6, nombre: 'Aceite Corporal Aromatico', categoria: 'cuerpo', precio: 42.00, imagen: 'images/aceite-corporal.jpg', descripcion: 'Aceite corporal nutritivo con aroma relajante. Hidrata y suaviza la piel del cuerpo en profundidad.', rating: 4.6, stock: 7 },
+    { id: 7, nombre: 'Crema de Manos Reparadora', categoria: 'cuerpo', precio: 19.99, imagen: 'images/crema-manos.jpg', descripcion: 'Crema reparadora especializada para manos. Protege y regenera la piel mas delicada.', rating: 4.3, stock: 25 },
+    { id: 8, nombre: 'Contorno de Ojos Antiarrugas', categoria: 'especializado', precio: 68.00, imagen: 'images/contorno-ojos.jpg', descripcion: 'Contorno anti-aging con cafaina y retinol natural. Reduce ojeras y arrugas de expresion en 4 semanas.', rating: 4.9, descuento: 15, stock: 5 },
+    { id: 9, nombre: 'Protector Solar SPF 50+', categoria: 'especializado', precio: 45.99, imagen: 'images/protector-solar.jpg', descripcion: 'Protector UV mineral con filtro de amplio espectro. Protege sin dejar residuo blanco. Apto para todas las pieles.', rating: 4.8, stock: 18 },
+    { id: 10, nombre: 'Serum Antienvejecimiento Avanzado', categoria: 'especializado', precio: 72.50, imagen: 'images/serum-antienvejecimiento.jpg', descripcion: 'Formula premium con retinol y peptidos biodispersables. Reafirma y rejuvenece la piel notoriamente.', rating: 4.9, descuento: 10, stock: 6 },
+    { id: 11, nombre: 'Exfoliante Enzimatico Suave', categoria: 'rostro', precio: 35.00, imagen: 'images/exfoliante-enzimatico.jpg', descripcion: 'Exfoliante enzimatico con papaya. Elimina celulas muertas sin irritar. 1-2 veces por semana.', rating: 4.5, stock: 14 },
+    { id: 12, nombre: 'Booster Luminosidad Facial', categoria: 'especializado', precio: 55.00, imagen: 'images/booster-luminosidad.jpg', descripcion: 'Booster concentrado con niacinamida pura. Proporciona efecto iluminador inmediato y a largo plazo.', rating: 4.7, descuento: 12, stock: 9 }
 ];
 
 // CARRITO
@@ -57,7 +57,7 @@ function createProductCard(producto) {
     
     return `
         <div class="product-card">
-            <div class="product-image">${producto.imagen}</div>
+            <div class="product-image"><img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='images/placeholder.jpg'"></div>
             <div class="product-info">
                 <div class="product-name">${producto.nombre}</div>
                 <div class="product-category">${producto.categoria}</div>
@@ -127,7 +127,7 @@ function showProductDetail(productId) {
     const oldPrice = producto.descuento ? `<p style="text-decoration:line-through;color:#999">$${producto.precio.toFixed(2)}</p>` : '';
     
     const html = `
-        <div class="product-detail-image">${producto.imagen}</div>
+        <div class="product-detail-image"><img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='images/placeholder.jpg'"></div>
         <div class="product-detail-info">
             <h2>${producto.nombre}</h2>
             <div class="category">${producto.categoria}</div>
@@ -135,10 +135,10 @@ function showProductDetail(productId) {
             ${oldPrice}
             <div class="price">$${price}</div>
             <div class="desc">${producto.descripcion}</div>
-            <div style="margin-bottom:1.5rem">Stock: <strong>10 unidades disponibles</strong></div>
+            <div style="margin-bottom:1.5rem">Stock: <strong>${producto.stock} unidades disponibles</strong></div>
             <div class="quantity-selector">
                 <button onclick="decreaseQty()">−</button>
-                <input type="number" id="quantity" value="1" min="1" max="10">
+                <input type="number" id="quantity" value="1" min="1" max="${producto.stock}">
                 <button onclick="increaseQty()">+</button>
             </div>
             <button class="btn-primary" onclick="addToCartFromDetail(${productId})" style="width:100%;padding:15px">Añadir al Carrito</button>
@@ -163,9 +163,17 @@ function decreaseQty() {
 // AÑADIR AL CARRITO
 function addToCart(productId) {
     const producto = productos.find(p => p.id === productId);
+    if (producto.stock <= 0) {
+        showNotification('Producto agotado');
+        return;
+    }
     const existeEnCarrito = carrito.find(item => item.id === productId);
     
     if (existeEnCarrito) {
+        if (existeEnCarrito.cantidad >= producto.stock) {
+            showNotification('No hay suficiente stock disponible');
+            return;
+        }
         existeEnCarrito.cantidad += 1;
     } else {
         carrito.push({ ...producto, cantidad: 1 });
