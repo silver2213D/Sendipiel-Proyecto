@@ -19,8 +19,12 @@ let carrito = [];
 
 // INICIALIZAR LA PÁGINA
 document.addEventListener('DOMContentLoaded', function() {
+    loadProductsFromLocalStorage();
     loadFeaturedProducts();
     loadProducts();
+    
+    // Event listener para el formulario de agregar producto
+    document.getElementById('add-product-form').addEventListener('submit', addProduct);
 });
 
 // MOSTRAR PÁGINA
@@ -283,9 +287,13 @@ const observer = new MutationObserver(() => {
     if (document.getElementById('carrito').style.display !== 'none') {
         displayCart();
     }
+    if (document.getElementById('admin').style.display !== 'none') {
+        loadAdminProducts();
+    }
 });
 
 observer.observe(document.getElementById('carrito'), { attributes: true });
+observer.observe(document.getElementById('admin'), { attributes: true });
 
 // PAGAR
 function checkout() {
