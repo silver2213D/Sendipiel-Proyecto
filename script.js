@@ -261,16 +261,16 @@ function addProduct(e) {
     const discountInput = document.getElementById('product-discount');
 
     const nombre = nameInput.value.trim();
-    const categoria = categorySelect.value;
-    const seccion = sectionSelect ? sectionSelect.value : 'general';
+    const categoria = (categorySelect && categorySelect.value.trim()) ? categorySelect.value.trim() : 'general';
+    const seccion = (sectionSelect && sectionSelect.value.trim()) ? sectionSelect.value.trim() : 'general';
     const precio = parseFloat(priceInput.value) || 0;
     const stock = parseInt(stockInput.value, 10) || 0;
     const rating = parseFloat(ratingInput.value) || 0;
     const descripcion = descriptionInput.value.trim();
     const descuento = parseFloat(discountInput.value) || 0;
 
-    if (!nombre || !categoria) {
-        showNotification('Completa al menos nombre y categoría.');
+    if (!nombre) {
+        showNotification('Completa el nombre del producto.');
         return;
     }
 
