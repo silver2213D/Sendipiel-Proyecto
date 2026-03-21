@@ -71,8 +71,8 @@
                 <div class="filter-section">
                     <h4>Rango de Precio</h4>
                     <label for="price-range">Precio máximo:</label>
-                    <input type="range" id="price-range" name="price-range" min="0" max="300" value="300" onchange="filterProducts()">
-                    <p>Hasta <span class="price-symbol">$</span><span id="price-value">300</span></p>
+                    <input type="range" id="price-range" name="price-range" min="0" max="2000" value="2000" onchange="filterProducts()">
+                    <p>Hasta <span class="price-symbol">RD$</span><span id="price-value">2000</span></p>
                 </div>
             </aside>
             <main class="tienda-main">
@@ -128,9 +128,9 @@
             <div class="cart-items" id="cart-items"></div>
             <div class="cart-summary">
                 <h3>Resumen</h3>
-                <p>Subtotal: $<span id="subtotal">0.00</span></p>
-                <p>Envío: $<span id="shipping">0.00</span></p>
-                <h4>Total: $<span id="total">0.00</span></h4>
+                <p>Subtotal: RD$<span id="subtotal">0.00</span></p>
+                <p>Envío: RD$<span id="shipping">0.00</span></p>
+                <h4>Total: RD$<span id="total">0.00</span></h4>
                 <button class="btn-primary" onclick="checkout()">Ir a Pagar</button>
             </div>
         </div>
@@ -244,7 +244,7 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="product-price">Precio ($):</label>
+                                <label for="product-price">Precio (RD$):</label>
                                 <input type="number" id="product-price" name="product-price" step="0.01" min="0" required>
                             </div>
                             <div class="form-group">

@@ -1,17 +1,17 @@
 // BASE DE DATOS DE PRODUCTOS LOGO EMPRESA
 const productos = [
-    { id: 1, nombre: 'Shampoo Reparador con Keratina', categoria: 'shampoo', seccion: 'general', precio: 25.00, imagen: 'images/piel-sensible.jpg', descripcion: 'Shampoo nutritivo que refuerza la fibra capilar y mejora la elasticidad en cada lavado.', rating: 4.8, stock: 18 },
-    { id: 2, nombre: 'Acondicionador Hidratante', categoria: 'acondicionador', seccion: 'general', precio: 22.50, imagen: 'images/piel-sensible.jpg', descripcion: 'Acondicionador ligero que desenreda y aporta brillo sin apelmazar.', rating: 4.7, stock: 20 },
-    { id: 3, nombre: 'Mascarilla Intensiva de Argán', categoria: 'tratamiento', seccion: 'general', precio: 29.90, imagen: 'images/piel-sensible.jpg', descripcion: 'Tratamiento profundo para recuperar el cabello seco y dañado en minutos.', rating: 4.9, descuento: 15, stock: 12 },
-    { id: 4, nombre: 'Serum Anti-frizz', categoria: 'estilo', seccion: 'general', precio: 19.99, imagen: 'images/piel-sensible.jpg', descripcion: 'Serum ligero que controla el frizz y aporta un acabado suave y sedoso.', rating: 4.6, stock: 10 },
-    { id: 5, nombre: 'Spray Protector Térmico', categoria: 'estilo', seccion: 'general', precio: 18.50, imagen: 'images/piel-sensible.jpg', descripcion: 'Protege el cabello del calor de planchas y secadores hasta 230°C.', rating: 4.5, stock: 22 },
-    { id: 6, nombre: 'Aceite de Argán Puro', categoria: 'tratamiento', seccion: 'general', precio: 24.00, imagen: 'images/piel-sensible.jpg', descripcion: 'Aceite nutritivo para puntas abiertas y brillo intenso.', rating: 4.8, stock: 14 },
-    { id: 7, nombre: 'Crema para Puntas Secas', categoria: 'tratamiento', seccion: 'general', precio: 16.99, imagen: 'images/piel-sensible.jpg', descripcion: 'Reducción de puntas abiertas con efecto reparador inmediato.', rating: 4.4, stock: 27 },
-    { id: 8, nombre: 'Gel Fijador Suave', categoria: 'estilo', seccion: 'general', precio: 14.99, imagen: 'images/piel-sensible.jpg', descripcion: 'Fijación flexible con acabado natural y sin residuos.', rating: 4.3, descuento: 10, stock: 16 },
-    { id: 9, nombre: 'Shampoo Detox de Carbón', categoria: 'shampoo', seccion: 'general', precio: 21.99, imagen: 'images/piel-sensible.jpg', descripcion: 'Limpia profundamente eliminando residuos y exceso de grasa.', rating: 4.7, stock: 19 },
-    { id: 10, nombre: 'Mascarilla Nocturna Revitalizante', categoria: 'tratamiento', seccion: 'general', precio: 27.50, imagen: 'images/piel-sensible.jpg', descripcion: 'Repara mientras duermes para un cabello más suave al despertar.', rating: 4.9, descuento: 12, stock: 11 },
-    { id: 11, nombre: 'Crema para Definición de Rizos', categoria: 'estilo', seccion: 'general', precio: 20.00, imagen: 'images/piel-sensible.jpg', descripcion: 'Define rizos sin frizz y con movimiento natural.', rating: 4.6, stock: 13 },
-    { id: 12, nombre: 'Mascarilla de Colágeno + Vitamina E', categoria: 'tratamiento', seccion: 'general', precio: 26.00, imagen: 'images/piel-sensible.jpg', descripcion: 'Repara y fortalece la fibra capilar dejándola elástica y brillante.', rating: 4.8, descuento: 15, stock: 9 }
+    { id: 1, nombre: 'Shampoo Reparador con Keratina', categoria: 'shampoo', seccion: 'general', precio: 1450, imagen: 'images/piel-sensible.jpg', descripcion: 'Shampoo nutritivo que refuerza la fibra capilar y mejora la elasticidad en cada lavado.', rating: 4.8, stock: 18 },
+    { id: 2, nombre: 'Acondicionador Hidratante', categoria: 'acondicionador', seccion: 'general', precio: 1305, imagen: 'images/piel-sensible.jpg', descripcion: 'Acondicionador ligero que desenreda y aporta brillo sin apelmazar.', rating: 4.7, stock: 20 },
+    { id: 3, nombre: 'Mascarilla Intensiva de Argán', categoria: 'tratamiento', seccion: 'general', precio: 1734, imagen: 'images/piel-sensible.jpg', descripcion: 'Tratamiento profundo para recuperar el cabello seco y dañado en minutos.', rating: 4.9, descuento: 15, stock: 12 },
+    { id: 4, nombre: 'Serum Anti-frizz', categoria: 'estilo', seccion: 'general', precio: 1159, imagen: 'images/piel-sensible.jpg', descripcion: 'Serum ligero que controla el frizz y aporta un acabado suave y sedoso.', rating: 4.6, stock: 10 },
+    { id: 5, nombre: 'Spray Protector Térmico', categoria: 'estilo', seccion: 'general', precio: 1073, imagen: 'images/piel-sensible.jpg', descripcion: 'Protege el cabello del calor de planchas y secadores hasta 230°C.', rating: 4.5, stock: 22 },
+    { id: 6, nombre: 'Aceite de Argán Puro', categoria: 'tratamiento', seccion: 'general', precio: 1392, imagen: 'images/piel-sensible.jpg', descripcion: 'Aceite nutritivo para puntas abiertas y brillo intenso.', rating: 4.8, stock: 14 },
+    { id: 7, nombre: 'Crema para Puntas Secas', categoria: 'tratamiento', seccion: 'general', precio: 985, imagen: 'images/piel-sensible.jpg', descripcion: 'Reducción de puntas abiertas con efecto reparador inmediato.', rating: 4.4, stock: 27 },
+    { id: 8, nombre: 'Gel Fijador Suave', categoria: 'estilo', seccion: 'general', precio: 869, imagen: 'images/piel-sensible.jpg', descripcion: 'Fijación flexible con acabado natural y sin residuos.', rating: 4.3, descuento: 10, stock: 16 },
+    { id: 9, nombre: 'Shampoo Detox de Carbón', categoria: 'shampoo', seccion: 'general', precio: 1275, imagen: 'images/piel-sensible.jpg', descripcion: 'Limpia profundamente eliminando residuos y exceso de grasa.', rating: 4.7, stock: 19 },
+    { id: 10, nombre: 'Mascarilla Nocturna Revitalizante', categoria: 'tratamiento', seccion: 'general', precio: 1595, imagen: 'images/piel-sensible.jpg', descripcion: 'Repara mientras duermes para un cabello más suave al despertar.', rating: 4.9, descuento: 12, stock: 11 },
+    { id: 11, nombre: 'Crema para Definición de Rizos', categoria: 'estilo', seccion: 'general', precio: 1160, imagen: 'images/piel-sensible.jpg', descripcion: 'Define rizos sin frizz y con movimiento natural.', rating: 4.6, stock: 13 },
+    { id: 12, nombre: 'Mascarilla de Colágeno + Vitamina E', categoria: 'tratamiento', seccion: 'general', precio: 1508, imagen: 'images/piel-sensible.jpg', descripcion: 'Repara y fortalece la fibra capilar dejándola elástica y brillante.', rating: 4.8, descuento: 15, stock: 9 }
 ];
 
 // SECCIONES DE PRODUCTOS (ADMIN)
@@ -220,7 +220,7 @@ function loadProducts() {
 // CREAR TARJETA DE PRODUCTO
 function createProductCard(producto) {
     const price = producto.descuento ? (producto.precio * (1 - producto.descuento / 100)).toFixed(2) : producto.precio.toFixed(2);
-    const oldPrice = producto.descuento ? `<s style="color:#999;font-size:0.9rem">$${producto.precio.toFixed(2)}</s>` : '';
+    const oldPrice = producto.descuento ? `<s style="color:#999;font-size:0.9rem">RD$${producto.precio.toFixed(2)}</s>` : '';
     
     const outOfStock = producto.stock <= 0;
     const stockLabel = outOfStock ? '<span class="stock out">Agotado</span>' : `<span class="stock">${producto.stock} disponibles</span>`;
@@ -232,7 +232,7 @@ function createProductCard(producto) {
                 <div class="product-name">${producto.nombre}</div>
                 <div class="product-category">${producto.categoria}</div>
                 <div class="product-rating">${'⭐'.repeat(Math.floor(producto.rating))} ${producto.rating}</div>
-                <div class="product-price">${oldPrice} $${price}</div>
+                <div class="product-price">${oldPrice} RD$${price}</div>
                 <div class="product-stock">${stockLabel}</div>
             </div>
         </div>
@@ -261,7 +261,7 @@ function loadAdminProducts() {
             <div class="admin-product-item">
                 <div>
                     <strong>${p.nombre}</strong>
-                    <div style="font-size:0.9rem;color:#555">${sectionName} • ${p.categoria} • $${p.precio.toFixed(2)}</div>
+                    <div style="font-size:0.9rem;color:#555">${sectionName} • ${p.categoria} • RD$${p.precio.toFixed(2)}</div>
                 </div>
                 <button class="btn-secondary" onclick="deleteProduct(${p.id})">Eliminar</button>
             </div>
@@ -388,7 +388,7 @@ function showProductDetail(productId) {
     if (!producto) return;
     
     const price = producto.descuento ? (producto.precio * (1 - producto.descuento / 100)).toFixed(2) : producto.precio.toFixed(2);
-    const oldPrice = producto.descuento ? `<p style="text-decoration:line-through;color:#999">$${producto.precio.toFixed(2)}</p>` : '';
+    const oldPrice = producto.descuento ? `<p style="text-decoration:line-through;color:#999">RD$${producto.precio.toFixed(2)}</p>` : '';
     
     const html = `
         <div class="product-detail-image"><img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='images/placeholder.jpg'"></div>
@@ -397,7 +397,7 @@ function showProductDetail(productId) {
             <div class="category">${producto.categoria}</div>
             <div class="rating" style="color:#ffc107;margin-bottom:1rem">⭐ ${producto.rating}</div>
             ${oldPrice}
-            <div class="price">$${price}</div>
+            <div class="price">RD$${price}</div>
             <div class="desc">${producto.descripcion}</div>
             <div style="margin-bottom:1.5rem">Stock: <strong>${producto.stock} unidades disponibles</strong></div>
             <div class="quantity-selector">
@@ -495,12 +495,12 @@ function displayCart() {
                 <div class="cart-item-image">${item.imagen}</div>
                 <div class="cart-item-details">
                     <h4>${item.nombre}</h4>
-                    <p>$${finalPrice.toFixed(2)} c/u</p>
+                    <p>RD$${finalPrice.toFixed(2)} c/u</p>
                 </div>
                 <div class="cart-item-quantity">
                     <input type="number" value="${item.cantidad}" min="1" onchange="updateCartItemQty(${index}, this.value)">
                 </div>
-                <div class="cart-item-price">$${(finalPrice * item.cantidad).toFixed(2)}</div>
+                <div class="cart-item-price">RD$${(finalPrice * item.cantidad).toFixed(2)}</div>
                 <button class="cart-item-remove" onclick="removeFromCart(${index})">✕</button>
             </div>
         `;
@@ -558,7 +558,7 @@ observer.observe(document.getElementById('admin'), { attributes: true });
 // PAGAR
 function checkout() {
     const total = document.getElementById('total').textContent;
-    showNotification(`¡Compra realizada! Total: $${total}`);
+    showNotification(`¡Compra realizada! Total: RD$${total}`);
     carrito = [];
     updateCartCount();
     setTimeout(() => showPage('home'), 1500);
