@@ -23,8 +23,8 @@ let secciones = [
 let carrito = [];
 
 // INICIALIZAR LA PÁGINA
-document.addEventListener('DOMContentLoaded', function() {
-    loadProductsFromLocalStorage();
+document.addEventListener('DOMContentLoaded', async function() {
+    await loadProductsFromSupabase();
     loadSectionsFromLocalStorage();
     loadSectionsInProductForm();
 
@@ -77,23 +77,57 @@ function loadHomeProducts() {
     attachProductCardListeners();
 }
 
-// CARGAR PRODUCTOS DESDE STORAGE
-function loadProductsFromLocalStorage() {
-    const saved = localStorage.getItem('productos');
-    if (!saved) return;
-
+// CARGAR PRODUCTOS DESDE SUPABASE
+async function loadProductsFromSupabase() {
     try {
-        const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) {
-            productos.splice(0, productos.length, ...parsed);
+        const { data, error } = await supabaseClient
+            .from('productos')
+            .select('*');
+        
+        if (error) throw error;
+        
+        if (data && data.length > 0) {
+            productos.splice(0, productos.length, ...data);
         }
-    } catch {
-        // ignore
+    } catch (error) {
+        console.error('Error cargando productos:', error);
     }
 }
 
-function saveProductsToLocalStorage() {
-    localStorage.setItem('productos', JSON.stringify(productos));
+// GUARDAR/ACTUALIZAR PRODUCTO EN SUPABASE
+async function saveProductToSupabase(product) {
+    try {
+        if (product.id) {
+            // Actualizar existente
+            const { error } = await supabaseClient
+                .from('productos')
+                .update(product)
+                .eq('id', product.id);
+            if (error) throw error;
+        } else {
+            // Insertar nuevo
+            const { data, error } = await supabaseClient
+                .from('productos')
+                .insert([product]);
+            if (error) throw error;
+            return data?.[0];
+        }
+    } catch (error) {
+        console.error('Error guardando producto:', error);
+    }
+}
+
+// BORRAR PRODUCTO DE SUPABASE
+async function deleteProductFromSupabase(productId) {
+    try {
+        const { error } = await supabaseClient
+            .from('productos')
+            .delete()
+            .eq('id', productId);
+        if (error) throw error;
+    } catch (error) {
+        console.error('Error eliminando producto:', error);
+    }
 }
 
 function loadSectionsFromLocalStorage() {
@@ -239,7 +273,7 @@ function deleteProduct(productId) {
     const index = productos.findIndex(p => p.id === productId);
     if (index === -1) return;
     productos.splice(index, 1);
-    saveProductsToLocalStorage();
+    deleteProductFromSupabase(productId);
     loadProducts();
     loadHomeProducts();
     loadAdminProducts();
@@ -247,7 +281,7 @@ function deleteProduct(productId) {
 }
 
 // AGREGAR PRODUCTO NUEVO
-function addProduct(e) {
+async function addProduct(e) {
     e.preventDefault();
 
     const nameInput = document.getElementById('product-name');
@@ -274,10 +308,7 @@ function addProduct(e) {
         return;
     }
 
-    const newId = productos.length ? Math.max(...productos.map(p => p.id)) + 1 : 1;
-
     const newProduct = {
-        id: newId,
         nombre,
         categoria,
         seccion: seccion || 'general',
@@ -292,19 +323,20 @@ function addProduct(e) {
     if (imageInput && imageInput.files && imageInput.files[0]) {
         const file = imageInput.files[0];
         const reader = new FileReader();
-        reader.onload = function () {
+        reader.onload = async function () {
             newProduct.imagen = reader.result;
-            productos.push(newProduct);
+            await saveProductToSupabase(newProduct);
+            await loadProductsFromSupabase();
             afterProductAdded();
         };
         reader.readAsDataURL(file);
     } else {
-        productos.push(newProduct);
+        await saveProductToSupabase(newProduct);
+        await loadProductsFromSupabase();
         afterProductAdded();
     }
 
     function afterProductAdded() {
-        saveProductsToLocalStorage();
         loadProducts();
         loadHomeProducts();
         loadAdminProducts();
